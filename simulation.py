@@ -2,7 +2,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-
+import matplotlib
 b = 2.5/14 # 感染率: 一人の人間が感染させる人数。2週間で2.5人で仮定
 g = 1.0/14 # 2週間すると感染率を失う。それまでに一定の割合で抗体を得る（簡単のため
 
@@ -48,6 +48,7 @@ for i in list(range(width)):
     infected_rate += infected_list[i]
     recovered_rate += recovered_list[i]
 
-plt.title('日別新規感染者数')
-plt.bar(suspectiable_rate, 500)
+plot_suspectiable_list = list(map(lambda x: int(x*population), suspectiable_list))
+plt.title('daily new infected peple')
+plt.bar(range(width),plot_suspectiable_list)
 plt.show()
