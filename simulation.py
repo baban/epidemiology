@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+import numpy as np
+import matplotlib.pyplot as plt
+
 b = 2.5/14 # 感染率: 一人の人間が感染させる人数。2週間で2.5人で仮定
 g = 1.0/14 # 2週間すると感染率を失う。それまでに一定の割合で抗体を得る（簡単のため
 
@@ -15,7 +18,7 @@ def infected_delta():
 def recoverd_delta():
   return g * infected_rate
 
-print "start..."
+print("start...")
 
 # 日本の人口
 population = 1.2*100000000
@@ -37,10 +40,10 @@ for i in list(range(width)):
     suspectiable_list[i] = suspectiable_delta()
     recovered_list[i] = recoverd_delta()
     infected_list[i] = suspectiable_list[i] - recovered_list[i]
-    print "day:" + str(i+1)
-    print "新規感染者:" + str(suspectiable_list[i]*population)
-    print "抗体を得た人:" + str(recovered_list[i]*population)
-    print "追加の感染者数:" + str(infected_list[i]*population)
+    print("day:" + str(i+1))
+    print("新規感染者:" + str(suspectiable_list[i]*population))
+    print("抗体を得た人:" + str(recovered_list[i]*population))
+    print("追加の感染者数:" + str(infected_list[i]*population))
     suspectiable_rate += suspectiable_list[i]
     infected_rate += infected_list[i]
     recovered_rate += recovered_list[i]
