@@ -52,3 +52,5 @@ plot_suspectiable_list = list(map(lambda x: int(x*population), suspectiable_list
 plt.title('daily new infected peple')
 plt.bar(range(width),plot_suspectiable_list)
 plt.show()
+
+sir.pyp
