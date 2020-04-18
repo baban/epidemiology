@@ -47,3 +47,7 @@ for i in list(range(width)):
     suspectiable_rate += suspectiable_list[i]
     infected_rate += infected_list[i]
     recovered_rate += recovered_list[i]
+
+plt.title('日別新規感染者数')
+plt.bar(suspectiable_rate, 500)
+plt.show()
