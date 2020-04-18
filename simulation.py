@@ -19,9 +19,11 @@ print "start..."
 
 # 日本の人口
 population = 1.2*100000000
+# 感染者の初期値
+inflected_first = 100.0
 
 # 国内に発生したウィルス所持者の初期値
-infected_rate = 0.000001
+infected_rate = inflected_first/population
 # 無感染者の割合
 suspectiable_rate = 1.0 - infected_rate
 # 回復者
