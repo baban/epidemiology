@@ -17,12 +17,13 @@ def recoverd_delta():
 
 print "start..."
 
-population = 1200*10000
-
 # 日本の人口
-suspectiable_rate = 1.0
+population = 1.2*100000000
+
 # 国内に発生したウィルス所持者の初期値
-infected_rate = 0.00001
+infected_rate = 0.000001
+# 無感染者の割合
+suspectiable_rate = 1.0 - infected_rate
 # 回復者
 recovered_rate = 0.0
 
