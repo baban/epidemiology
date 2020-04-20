@@ -60,9 +60,11 @@ for i in list(range(width)):
     recovered_rate += recovered_list[i]
 
 plot_suspectiable_list = list(map(lambda x: int(x*population), suspectiable_list))
+plot_inflected_list = list(map(lambda x: int(x*population), infected_list))
 #igfont = {'family':'Noto Sans CJK'}
 #plt.title('daily new infected peple', **igfont)
 plt.title('daily new infected peple')
 plt.bar(range(width),plot_suspectiable_list)
+plt.bar(range(width),plot_inflected_list)
 plt.show()
 #plt.savefig('figure.png')
