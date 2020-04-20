@@ -48,7 +48,7 @@ for i in list(range(width)):
     suspectiable_list[i] = suspectiable_delta()
     exposed_list[i] = exposed_delta()
     recovered_list[i] = recoverd_delta()
-    infected_list[i] = suspectiable_list[i] - recovered_list[i]
+    infected_list[i] = exposed_list[i] - recovered_list[i]
     print("day:" + str(i+1))
     print("新規感染者:" + str(suspectiable_list[i]*population))
     print("発症者:" + str(exposed_list[i]*population))
