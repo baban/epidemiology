@@ -12,7 +12,7 @@ m = 1
 # https://www.fttsus.jp/covinfo/numerical-simulation/
 b = 0.488 / m # 感染率: 一人の人間が感染させる人数。
 g = 0.0455 / m
-term = 33 # 期間。1年間
+term = 365 # 期間。1年間
 width = term * m # 計算期間
 
 # 日本の人口
@@ -85,7 +85,7 @@ for i in list(range(width)):
 
 for i in list(range(term)):
   print("day:" + str(i+1))
-  print("新規感染者:" + str(plot_list[i]))
+  print("感染者:" + str(plot_list[i]))
 
 print("caliculated...")
 
